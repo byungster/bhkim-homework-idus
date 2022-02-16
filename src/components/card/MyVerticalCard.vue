@@ -18,7 +18,10 @@
         :price="info.price"
       />
       <!-- 2.2 리뷰 란-->
-      <div class="card-detail-review">
+      <div
+        class="card-detail-review"
+        v-if="info.reviewRate || info.reviewComment"
+      >
         <div class="review-rate">
           <i class="ico-star fill" v-for="idx in info.reviewRate" :key="idx" />
           <i
@@ -74,11 +77,12 @@ export default {
   margin: 1%;
   list-style: none;
   background-color: white;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 2px #e8e8e8;
-  box-shadow: 2px 2px 2px #e8e8e8;
+  border-radius: 0.5vw;
+  -webkit-box-shadow: 0.2vw 0.2vw 0.2vw #e8e8e8;
+  box-shadow: 0.2vw 0.2vw 0.2vw #e8e8e8;
   font-size: 1vw;
+  height: 100%;
+  cursor: pointer;
 }
 
 .card-thumbnail-cover {
@@ -91,6 +95,15 @@ export default {
   background-repeat: no-repeat;
 }
 
+.card:hover {
+  transform: scale(1.04);
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
 .card-thumbnail:after {
   content: "";
   display: block;
@@ -98,7 +111,7 @@ export default {
 }
 
 .card-detail {
-  margin: 5px;
+  margin: 1vw;
   text-align: left;
 }
 
@@ -108,7 +121,7 @@ export default {
   color: #999;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 4px;
+  margin-bottom: 1vw;
 }
 
 .card-detail-title {
@@ -138,12 +151,27 @@ export default {
   }
 }
 
-.card-detail-price {
-  margin: 8px 0;
+.card-detail-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding-top: 0.5vw;
+  height: 4vh;
+  border-top: 0.1vw solid lightgray;
 }
 
-.card-detail-review {
-  border-top: 1px solid lightgray;
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card-detail-review {
+    height: 100%;
+  }
+}
+
+.card-detail-price {
+  margin: 1vw 0;
 }
 
 .review-comment {

@@ -16,9 +16,9 @@ export default {
   name: "MyTextArea.vue",
   props: {
     maxLength: {
-      type: Number,
+      type: String,
       required: false,
-      default: 500,
+      default: "500",
     },
     placeholder: {
       type: String,
@@ -52,6 +52,13 @@ export default {
   watch: {
     inputText(newValue) {
       this.$emit("textChanged", newValue !== this.storedText);
+    },
+    remainedLength(newValue) {
+      if (newValue < 0) {
+        this.$emit("textChanged", false);
+      } else if (this.inputText !== this.storedText) {
+        this.$emit("textChanged", true);
+      }
     },
     storedText: {
       immediate: true,

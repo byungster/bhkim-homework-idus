@@ -33,7 +33,11 @@
               :key="idx + '5'"
             />
           </div>
-          <span class="review-author" v-html="info.reviewAuthor" />
+          <span
+            class="review-author"
+            v-if="info.reviewAuthor"
+            v-html="info.reviewAuthor"
+          />
         </div>
       </div>
     </div>

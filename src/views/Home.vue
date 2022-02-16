@@ -6,7 +6,7 @@
       <!-- 과제 1.1 Card UI - 세로형 -->
       <h3 v-html="'1.1 세로형 카드 (Vertical Card)'" />
       <div class="homework-1-1">
-        <my-card-list :cards="cards" />
+        <my-card-list :cards="cards" :isShowReview="isShowReview" />
       </div>
       <!-- 과제 1.1 Card UI - 가로형 -->
       <h3 v-html="'1.2 가로형 카드 (Horizontal Card)'" />
@@ -18,18 +18,31 @@
       <h1 v-html="'2. 폼 입력 UI'" />
       <h3 v-html="'2.1 디폴트 상태 & 입력중 상태'" />
       <div class="homework-2-1">
-        <h4 v-html="'설정해보기'" />
+        <div class="homework-2-1-form">
+          <my-text-area
+            @textChanged="setEditState"
+            :stored-text="configStoredText"
+            :max-length="configMaxLength"
+          />
+          <button
+            class="btn"
+            :disabled="!isNowEdit || configMaxLength < 0"
+            v-html="'저장'"
+          />
+        </div>
         <div class="homework-2-1-config">
+          설정:
           <label>
-            최대 글자수
+            1. 최대 글자수
             <input
               type="number"
               placeholder="최대 글자 수"
               v-model="configMaxLength"
             />
           </label>
+          ,
           <label>
-            초기 값
+            2. 초기 값
             <input
               type="text"
               placeholder="초기 값"
@@ -37,18 +50,13 @@
             />
           </label>
         </div>
-        <div class="homework-2-1-form">
-          <my-text-area
-            @textChanged="setEditState"
-            :stored-text="configStoredText"
-            :max-length="configMaxLength"
-          />
-          <button class="btn" :disabled="!isNowEdit" v-html="'저장'" />
-        </div>
       </div>
-      <h3 v-html="'2.2 Disable 상태 & Read Only 상태'" />
+      <h3 v-html="'2.2 Disable 상태'" />
       <div class="homework-2-2">
         <my-text-area :is-disabled="true" />
+      </div>
+      <h3 v-html="'2.3 Read Only 상태'" />
+      <div>
         <my-text-area :is-read-only="true" />
       </div>
     </div>
@@ -64,7 +72,10 @@ export default {
   name: "Home",
   components: { MyTextArea, MyCardList },
   data: () => ({
+    // 첫번째 과제,
     cards: [],
+    isShowReview: true,
+
     // 두번째 과제
     isNowEdit: false, // 입력 중
     configMaxLength: 500, // 최대 글자 수
@@ -85,12 +96,18 @@ export default {
 <style scoped>
 .homework-1 > div {
   background-color: #f6f6f6;
-  height: 100px;
+  height: 700px;
   overflow-y: scroll;
 }
 
 .homework-2-1-config {
   display: flex;
+  margin: 1vh 0;
+  font-size: 1.2vw;
+}
+
+.homework-2-1-config > label {
+  margin: 0 1vw;
 }
 
 .homework-2-1-form {
@@ -101,6 +118,7 @@ export default {
   background: #ffffff;
   border: 1px solid #ff7b30;
   color: #ff7b30;
+  margin-left: 0.5vw;
 }
 
 .btn[disabled] {

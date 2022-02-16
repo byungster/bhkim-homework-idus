@@ -68,6 +68,11 @@ export class Dummy {
         this.lastNames[Math.floor(Math.random() * 10) + 1] +
         "의 ";
 
+      let rate = Math.floor(Math.random() * 5);
+      let reviewComment = Math.floor(Math.random() * 10)
+        ? `${title} 너무 좋은 것 같아요 왜냐하면 ${firstName} 부분이 행복하게 해줘요.`
+        : "";
+
       infoDummy.push({
         id: uuidv4(),
         thumbnailPath: `https://picsum.photos/600/400?random=${[
@@ -76,14 +81,10 @@ export class Dummy {
         seller: seller,
         title: title,
         price: (Math.floor(Math.random() * 1000) + 10) * 100,
-        saleRate: Math.floor(Math.random() * 100) + 10,
-        reviewRate: Math.floor(Math.random() * 5) + 1,
-        reviewComment:
-          title +
-          " 너무 좋은 것 같아요 왜냐하면 " +
-          firstName +
-          " 부분이 행복하게 해줘요.",
-        reviewAuthor: "병스터",
+        saleRate: Math.floor(Math.random() * 90) + 5,
+        reviewRate: rate,
+        reviewComment: rate ? reviewComment : "",
+        reviewAuthor: rate ? "김병호" : "",
       });
     }
 
