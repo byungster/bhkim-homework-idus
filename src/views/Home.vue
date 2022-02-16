@@ -16,7 +16,7 @@
     </div>
     <div class="homework-2">
       <h1 v-html="'과제 2. 입력 폼 UI'" />
-      <h3 v-html="'2.1 디폴트 상태 & 입력중 상태'" />
+      <h3 v-html="'2.1 디폴트 상태 & 입력 중 상태'" />
       <div class="homework-2-1">
         <div class="homework-2-1-form">
           <my-text-area
