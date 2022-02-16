@@ -1,8 +1,8 @@
 <template>
   <div>
-    <span class="sale-rate">{{ saleRate }}%</span>
-    <span class="new-price">{{ newPrice }}원</span>
-    <span class="price">{{ price }}원</span>
+    <span class="sale-rate" v-html="saleRate + '%'" />
+    <span class="new-price" v-html="newPrice + '원'" />
+    <span class="price" v-html="price + '원'" />
   </div>
 </template>
 

@@ -65,12 +65,13 @@ export class Dummy {
       let seller =
         product +
         " 만드는 " +
-        this.lastNames[Math.floor(Math.random() * 10) + 1];
+        this.lastNames[Math.floor(Math.random() * 10) + 1] +
+        "의 ";
 
       infoDummy.push({
         id: uuidv4(),
         thumbnailPath: `https://picsum.photos/600/400?random=${[
-          Math.floor(Math.random() * 150) + 1,
+          Math.floor(Math.random() * 50) + 1,
         ]}`,
         seller: seller,
         title: title,

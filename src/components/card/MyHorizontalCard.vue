@@ -9,14 +9,17 @@
     </div>
     <!-- 2. 상세 란-->
     <div class="card-detail">
-      <span class="card-detail-title">{{
-        info.seller + "의 " + info.title
-      }}</span>
+      <span
+        class="card-detail-title"
+        v-html="info.seller + '의 ' + info.title"
+      />
       <!-- 2.2 리뷰 란-->
       <div class="card-detail-review">
-        <span v-if="info.reviewComment" class="review-comment">
-          {{ info.reviewComment }}
-        </span>
+        <span
+          class="review-comment"
+          v-if="info.reviewComment"
+          v-html="info.reviewComment"
+        />
         <div class="review-footer">
           <div class="review-rate">
             <i
@@ -30,7 +33,7 @@
               :key="idx + '5'"
             />
           </div>
-          <span class="review-author">{{ info.reviewAuthor }} </span>
+          <span class="review-author" v-html="info.reviewAuthor" />
         </div>
       </div>
     </div>

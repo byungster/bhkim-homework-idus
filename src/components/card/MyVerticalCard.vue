@@ -9,8 +9,8 @@
     </div>
     <!-- 2. 상세 란-->
     <div class="card-detail">
-      <span class="card-detail-seller">{{ info.seller }}</span>
-      <span class="card-detail-title">{{ info.title }}</span>
+      <span class="card-detail-seller" v-html="info.seller" />
+      <span class="card-detail-title" v-html="info.title" />
       <!-- 2.1 가격 란 -->
       <my-price-label
         class="card-detail-price"
@@ -27,9 +27,11 @@
             :key="idx + '5'"
           />
         </div>
-        <span v-if="info.reviewComment" class="review-comment">
-          {{ info.reviewComment }}
-        </span>
+        <span
+          class="review-comment"
+          v-if="info.reviewComment"
+          v-html="info.reviewComment"
+        />
       </div>
     </div>
   </li>
