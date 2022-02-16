@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- 과제 1. Card UI 보고서 -->
-    <h1 v-html="'1. 카드 UI'" />
+    <h1 v-html="'과제 1. 카드 UI'" />
     <div class="homework-1">
       <!-- 과제 1.1 Card UI - 세로형 -->
       <h3 v-html="'1.1 세로형 카드 (Vertical Card)'" />
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="homework-2">
-      <h1 v-html="'2. 폼 입력 UI'" />
+      <h1 v-html="'과제 2. 입력 폼 UI'" />
       <h3 v-html="'2.1 디폴트 상태 & 입력중 상태'" />
       <div class="homework-2-1">
         <div class="homework-2-1-form">
