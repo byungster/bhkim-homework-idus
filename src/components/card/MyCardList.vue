@@ -13,6 +13,10 @@
 import MyVerticalCard from "./MyVerticalCard.vue";
 import MyHorizontalCard from "./MyHorizontalCard.vue";
 
+/**
+ * @description 카드를 표시하는 list입니다.
+ * vertical 여부에 따라 컴포넌트를 동적으로 가져오는 것이 이 컴포넌트의 주요 기능입니다.
+ */
 export default {
   name: "MyCardList",
   components: { MyHorizontalCard, MyVerticalCard },

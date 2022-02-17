@@ -1,24 +1,34 @@
-# bhkim-homework
+# [김병호] 홈워크
 
-## Project setup
+## 데모
+
+https://byunghokim-homework.netlify.app/
+
+## 콘텐츠
+
+홈 : [Home.vue](/src/views/Home.vue)
+
+1. 카드 UI : [MyCardList.vue](/src/components/card/MyCardList.vue)  
+   1.1 세로형 카드 UI : [MyVerticalCard.vue](/src/components/card/MyVerticalCard.vue)  
+   1.2 가로형 카드 UI : [MyHorizontalCard.vue](/src/components/card/MyHorizontalCard.vue)
+
+2. 입력 폼 UI : [MyTextArea.vue](/src/components/textarea/MyTextArea.vue)  
+   2.1 디폴트 상태 & 입력 중 상태  
+   2.2 비활성화 상태  
+   2.3 읽기 전용 상태
+
+etc. Card 더미 데이터 : [dummy.js](/src/assets/dummy.js)
+
+## Project 실행해보기
+
+### 1. NPM 인스톨
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 2. 프로젝트 로컬 실행
+
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "MyPriceLabel.vue",
+  name: "MyPriceLabel",
   props: {
     saleRate: {
       type: Number,

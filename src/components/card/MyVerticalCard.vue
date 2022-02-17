@@ -24,11 +24,7 @@
       >
         <div class="review-rate">
           <i class="ico-star fill" v-for="idx in info.reviewRate" :key="idx" />
-          <i
-            class="ico-star"
-            v-for="idx in 5 - info.reviewRate"
-            :key="idx + '5'"
-          />
+          <i class="ico-star" v-for="idx in 5 - info.reviewRate" :key="idx" />
         </div>
         <span
           class="review-comment"
@@ -41,29 +37,26 @@
 </template>
 
 <script>
+/**
+ * @description 세로형 카드입니다.
+ */
 import MyPriceLabel from "../MyPriceLabel.vue";
 export default {
   components: { MyPriceLabel },
   props: {
     info: {
-      required: true,
       type: Object,
       default: () => ({
-        id: "cb31z306-00fe-491a-9f55-653a3f7c0e53",
-        thumbnailPath:
-          "https://image.idus.com/image/files/29f37b26904b40819df8e84df11c6baa_512.jpg",
-        seller: "김병호",
-        title: "점심 도시락",
-        price: 8500,
-        saleRate: 30,
-        reviewRate: 3,
-        reviewComment: "내가 먹는 점심식사는 11시 30분부터 시작됩니다.",
-        reviewAuthor: "병스터",
+        id: "",
+        thumbnailPath: "",
+        seller: "",
+        title: "",
+        price: 0,
+        saleRate: 0,
+        reviewRate: 0,
+        reviewComment: "",
+        reviewAuthor: "",
       }),
-    },
-    isVertical: {
-      type: Boolean,
-      default: true,
     },
   },
 };

@@ -27,11 +27,7 @@
               v-for="idx in info.reviewRate"
               :key="idx"
             />
-            <i
-              class="ico-star"
-              v-for="idx in 5 - info.reviewRate"
-              :key="idx + '5'"
-            />
+            <i class="ico-star" v-for="idx in 5 - info.reviewRate" :key="idx" />
           </div>
           <span
             class="review-author"
@@ -45,27 +41,26 @@
 </template>
 
 <script>
+/**
+ * @description 가로형 Card 컴포넌트입니다.
+ */
 export default {
+  name: "MyHorizontalCard",
   props: {
     info: {
       required: true,
       type: Object,
       default: () => ({
-        id: "cb31z306-00fe-491a-9f55-653a3f7c0e53",
-        thumbnailPath:
-          "https://image.idus.com/image/files/29f37b26904b40819df8e84df11c6baa_512.jpg",
-        seller: "김병호",
-        title: "점심 도시락 스시 세트",
-        price: 8500,
-        saleRate: 30,
-        reviewRate: 3,
-        reviewComment: "내가 먹는 점심식사는 11시 30분부터 시작됩니다.",
-        reviewAuthor: "병스터",
+        id: "",
+        thumbnailPath: "",
+        seller: "",
+        title: "",
+        price: 0,
+        saleRate: 0,
+        reviewRate: 0,
+        reviewComment: "",
+        reviewAuthor: "",
       }),
-    },
-    isVertical: {
-      type: Boolean,
-      default: true,
     },
   },
 };
@@ -85,6 +80,16 @@ export default {
   box-shadow: 2px 2px 2px #e8e8e8;
   font-size: 1vw;
   width: 100%;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .card-thumbnail-cover {
@@ -124,23 +129,6 @@ export default {
   text-overflow: ellipsis;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .card-detail-title {
-    color: black;
-    font-size: 0.9vw;
-    font-weight: 500;
-    padding: 0.5vw 0.5vw 0 0.5vw;
-    overflow: hidden;
-    display: block;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-
 .card-detail-review {
   margin-top: 0.5vw;
 }
@@ -164,21 +152,6 @@ export default {
   text-overflow: ellipsis;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .review-comment {
-    font-size: 0.7vw;
-    padding: 0.5vw;
-    display: block;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-
 @media only screen and (max-width: 1000px) {
   .review-comment {
     -webkit-line-clamp: 1;
@@ -199,5 +172,36 @@ export default {
 .review-author:before {
   content: "| ";
   padding-left: 0.5vw;
+}
+
+/** IE */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card-detail-title {
+    color: black;
+    font-size: 0.9vw;
+    font-weight: 500;
+    padding: 0.5vw 0.5vw 0 0.5vw;
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .review-comment {
+    font-size: 0.7vw;
+    padding: 0.5vw;
+    display: block;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 </style>
