@@ -140,6 +140,7 @@ export default {
   border: 1px solid #ff7b30;
   color: #ff7b30;
   margin-left: 0.5vw;
+  width: 5vw;
 }
 
 .btn[disabled] {
