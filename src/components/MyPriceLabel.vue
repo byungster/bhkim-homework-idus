@@ -7,6 +7,9 @@
 </template>
 
 <script>
+/**
+ * @description saleRate가 있는 경우에 대한 가격표 컴포넌트입니다.
+ */
 export default {
   name: "MyPriceLabel",
   props: {
