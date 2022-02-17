@@ -1,10 +1,11 @@
 # [김병호] 홈워크
 
 ## 데모
-
+데모는 여기에 있습니다.  
 https://byunghokim-homework.netlify.app/
 
 ## 콘텐츠
+콘텐츠는 다음과 같습니다.
 
 홈 : [Home.vue](/src/views/Home.vue)
 
@@ -20,6 +21,7 @@ https://byunghokim-homework.netlify.app/
 etc. Card 더미 데이터 : [dummy.js](/src/assets/dummy.js)
 
 ## Project 실행해보기
+다음 2개의 명령어를 실행하시어 로컬에서 결과물을 보실 수 있습니다.
 
 ### 1. NPM 인스톨
 
