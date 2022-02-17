@@ -37,10 +37,11 @@
 </template>
 
 <script>
+import MyPriceLabel from "../MyPriceLabel.vue";
+
 /**
  * @description 세로형 카드입니다.
  */
-import MyPriceLabel from "../MyPriceLabel.vue";
 export default {
   components: { MyPriceLabel },
   props: {
