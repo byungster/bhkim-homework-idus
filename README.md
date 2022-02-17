@@ -26,13 +26,13 @@ etc. Card 더미 데이터 : [dummy.js](/src/assets/dummy.js)
 
 ### 1. 프로젝트 Clone
 ```
-git clone https://github.com/byungster/bhkim-homwork-idus.git
+git clone https://github.com/byungster/bhkim-homework-idus.git
 ```
 
 ### 2. 디렉토리 이동, NPM 인스톨
 
 ```
-cd ./bhkim-homwork-idus; npm install;
+cd ./bhkim-homework-idus; npm install;
 ```
 
 ### 3. 프로젝트 로컬 실행
