@@ -12,6 +12,9 @@
 </template>
 
 <script>
+/**
+ * @description 입력 폼 UI(Textarea) 입니다.
+ */
 export default {
   name: "MyTextArea",
   props: {

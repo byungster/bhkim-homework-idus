@@ -129,21 +129,6 @@ export default {
   text-overflow: ellipsis;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .card-detail-title {
-    color: black;
-    font-size: 1.5vw;
-    font-weight: 500;
-    display: block;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-
 .card-detail-review {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,12 +142,6 @@ export default {
   border-top: 0.1vw solid lightgray;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .card-detail-review {
-    height: 100%;
-  }
-}
-
 .card-detail-price {
   margin: 1vw 0;
 }
@@ -174,7 +153,25 @@ export default {
   overflow: hidden;
 }
 
+/** IE */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card-detail-title {
+    color: black;
+    font-size: 1.5vw;
+    font-weight: 500;
+    display: block;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card-detail-review {
+    height: 100%;
+  }
+
   .review-comment {
     display: block;
     -webkit-line-clamp: 1;
