@@ -21,15 +21,21 @@ https://byunghokim-homework.netlify.app/
 etc. Card 더미 데이터 : [dummy.js](/src/assets/dummy.js)
 
 ## Project 실행해보기
-다음 2개의 명령어를 실행하시어 로컬에서 결과물을 보실 수 있습니다.
+다음 3개의 절차에 따라 명령어를 실행하시어 로컬에서 결과물을 보실 수 있습니다.
+(git과 node, npm이 PC에 설치되어 있어야 합니다.)
 
-### 1. NPM 인스톨
+### 1. 프로젝트 Clone
+```
+git clone https://github.com/byungster/bhkim-homwork-idus.git
+```
+
+### 2. 디렉토리 이동, NPM 인스톨
 
 ```
-npm install
+cd ./bhkim-homwork-idus; npm install;
 ```
 
-### 2. 프로젝트 로컬 실행
+### 3. 프로젝트 로컬 실행
 
 ```
 npm run serve
